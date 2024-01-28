@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Search Suggestion</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
+    <link href="assets/css/SearchSuggestion.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainMenu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a id="logo" class="navbar-brand" href="#link" title="">
+            Your Company
+        </a>
+        <nav class="site-nav" role="navigation">
+            <div class="collapse navbar-collapse" id="MainMenu">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown menu-background">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                            Category <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu mega-dropdown-menu">
+                            <li> <a href="#link">Category 1</a> </li>
+                            <li> <a href="#link">Category 2</a> </li>
+                            <li> <a href="#lins">Category 3</a> </li>
+                            <li> <a href="#link">Category 4</a> </li>
+                            <li class="divider hidden-xs"></li>
+                            <li> <a href="#link"><i class="fa fa-list-ul"></i> View All</a> </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                            User <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu mega-dropdown-menu">
+                            <li>
+                                <a rel="nofollow" href="/login"><i class="fa fa-sign-in"></i> Sign in</a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" href="/register"><i class="fa fa-plus-circle"></i> Sign up</a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" href="#faq"><i class="fa fa-question-circle"></i> Help</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Favorite Stores">
+                            <i class="fa fa-lg fa-heart hidden-xs"></i> <span class="hidden-lg hidden-md hidden-sm">Favorite</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="search-form" class="search-form js-search-form">
+            <form class="form-search" role="search" action="/search.php" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for Products, Brands and more..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+                <p class="clear top-keyword">
+                    <span class="hidden-xs">Top Keywords:</span>
+                    <a href="#" title="Google">Google</a>,
+                    <a href="#" title="Bootstrap 3">Bootstrap 3</a>,
+                    <a href="#" title="Bootsnipp">Bootsnipp</a>,
+                    <a href="#" title="Search">Search</a>,
+                    <a href="#" title="Suggestion">Suggestion</a>
+                </p>
+            </form>
+            <div class="instant-results">
+                <ul class="list-unstyled result-bucket">
+                    <li class="result-entry" data-suggestion="Target 1" data-position="1" data-type="type" data-analytics-type="merchant">
+                        <a href="#" class="result-link">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="https://mellon.co.tz/wp-content/uploads/2016/05/noimage.gif" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Heading 1</h4>
+                                    <p>0 offers available</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="result-entry" data-suggestion="Target 2" data-position="1" data-type="type" data-analytics-type="merchant">
+                        <a href="#" class="result-link">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="https://mellon.co.tz/wp-content/uploads/2016/05/noimage.gif" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Heading 2</h4>
+                                    <p>3 offers available</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="result-entry" data-suggestion="Target 3" data-position="2" data-type="type" data-analytics-type="merchant">
+                        <a href="#" class="result-link">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="https://mellon.co.tz/wp-content/uploads/2016/05/noimage.gif" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Heading 3</h4>
+                                    <p>17 offers available</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="https://bootsnipp.com/snippets/EzQnP">Search Suggestion</a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/SearchSuggestion.js"></script>
+</body>
+</html>
